@@ -1,7 +1,6 @@
 
 # Import your Python Libraries (you may need boto3 for AWS)
-import dash
-from dash import dcc, html
+from dash import Dash, dcc, html
 import plotly.graph_objs as go
 import numpy as np
 

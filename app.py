@@ -5,12 +5,12 @@ correct invocation line here:
 https://community.plotly.com/t/error-with-gunicorn-application-object-must-be-callable/31397 
 
 test invoke with: (but will end when your ec2 terminal session ends, resets, etc.)
-    $ gunicorn app:server --bind=0.0.0.0:8050
+    $ gunicorn app:server --bind=0.0.0.0:8501
 
 For persistent production you will need: (end with kill process number) 
-    (ENV)$ nohup gunicorn app:server --bind=0.0.0.0:8050 &
+    (ENV)$ nohup gunicorn app:server --bind=0.0.0.0:8501 &
     or
-    (ENV)$ screen gunicorn app:server --bind=0.0.0.0:8050 &
+    (ENV)$ screen gunicorn app:server --bind=0.0.0.0:8501 &
 
 
 # Import your Python Libraries (you may need boto3 for AWS)
@@ -29,5 +29,5 @@ app.layout = html.Div([
 ])
 
 if __name__ == '__main__':
-    app.run_server(host= '0.0.0.0', port=8050)
+    app.run_server(host= '0.0.0.0', port=8501)
 
